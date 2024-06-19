@@ -23,32 +23,17 @@ export default function Home() {
 		{ id: "user1", spaces: [{ id: "space1" }, { id: "space2" }] },
 		{ id: "user2", spaces: [{ id: "space3" }, { id: "space4" }] },
 	];
-	const tags = Array.from({ length: 50 }).map(
+	const tags = Array.from({ length: 10 }).map(
 		(_, i, a) => `v1.2.0-beta.${a.length - i}`,
 	);
 	return (
-		<main className="h-screen">
+		<main className="h-svh">
 			<ResizablePanelGroup direction="horizontal">
 				<ResizablePanel
 					defaultSize={15}
 					className="inset-y h-full flex flex-col"
 				>
-					{/* <div className="p-2 border-b">
-						<Select defaultValue="space1">
-							<SelectTrigger className="">
-								<SelectValue placeholder="Select a fruit" />
-							</SelectTrigger>
-							<SelectContent>
-								<SelectGroup>
-									<SelectItem value="space1">space1</SelectItem>
-									<SelectItem value="space2">space2</SelectItem>
-									<SelectItem value="space3">space3</SelectItem>
-								</SelectGroup>
-							</SelectContent>
-						</Select>
-					</div> */}
-
-					<ScrollArea className="h-svh w-full ">
+					<ScrollArea className="h-full w-full ">
 						<div className="p-1">
 							{tags.map((tag) => (
 								<Button
