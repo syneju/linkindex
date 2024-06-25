@@ -1,3 +1,5 @@
+import Footer from "@/components/footer";
+import Header from "@/components/header";
 import type { Metadata } from "next";
 
 import localFont from "next/font/local";
@@ -26,11 +28,9 @@ export default function RootLayout({
 	return (
 		<html lang="en">
 			<body className={`${geistSans.variable} ${geistMono.variable}`}>
-				<header className="p-4 bg-slate-50  border ">
-					<h1>LinkIndex</h1>
-				</header>
+				<Header />
 				{children}
-				<footer className="p-4 bg-slate-50 border">dd</footer>
+				<Footer />
 			</body>
 		</html>
 	);
