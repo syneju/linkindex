@@ -9,7 +9,7 @@ import {
 
 export default function LinkItem() {
 	return (
-		<Card className="w-full h-40 ">
+		<Card className="w-full h-24 ">
 			<CardHeader>
 				<CardTitle>Card Title</CardTitle>
 			</CardHeader>

@@ -1,4 +1,15 @@
 import {
+	NavigationMenu,
+	NavigationMenuContent,
+	NavigationMenuIndicator,
+	NavigationMenuItem,
+	NavigationMenuLink,
+	NavigationMenuList,
+	NavigationMenuTrigger,
+	NavigationMenuViewport,
+} from "@/components/ui/navigation-menu";
+import { navigationMenuTriggerStyle } from "@/components/ui/navigation-menu";
+import {
 	Select,
 	SelectContent,
 	SelectGroup,
@@ -7,19 +18,19 @@ import {
 	SelectTrigger,
 	SelectValue,
 } from "@/components/ui/select";
+import Link from "next/link";
+
 export default function SpaceBar() {
 	return (
-		<div className="p-2 border-t">
-			<Select defaultValue="acc1">
-				<SelectTrigger className="">
-					<SelectValue placeholder="acc" />
-				</SelectTrigger>
-				<SelectContent>
-					<SelectGroup>
-						<SelectItem value="acc1">acc1</SelectItem>
-					</SelectGroup>
-				</SelectContent>
-			</Select>
-		</div>
+		<NavigationMenu>
+			<NavigationMenuList>
+				<NavigationMenuItem>
+					<NavigationMenuTrigger>Speace</NavigationMenuTrigger>
+					<NavigationMenuContent>
+						<NavigationMenuLink>Link</NavigationMenuLink>
+					</NavigationMenuContent>
+				</NavigationMenuItem>
+			</NavigationMenuList>
+		</NavigationMenu>
 	);
 }

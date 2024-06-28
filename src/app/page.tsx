@@ -1,7 +1,7 @@
-import Aside from "@/components/aside";
+import Footer from "@/components/footer";
 import LinkItem from "@/components/link-item";
+import Sidebar from "@/components/sidebar";
 import SpaceBar from "@/components/space-bar";
-
 import {
 	ResizableHandle,
 	ResizablePanel,
@@ -19,34 +19,59 @@ export default function Home() {
 	];
 
 	return (
-		<main className="h-svh">
-			<ResizablePanelGroup direction="horizontal">
-				{/* Sidebar */}
-				<ResizablePanel
-					defaultSize={10}
-					className="inset-y h-full flex flex-col"
-				>
-					<Aside />
-					<SpaceBar />
-				</ResizablePanel>
-				<ResizableHandle disabled />
-				{/* Main Content */}
-				<ResizablePanel
-					defaultSize={90}
-					className="p-4 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 gap-4 "
-				>
-					<LinkItem />
-					<LinkItem />
-					<LinkItem />
-					<LinkItem />
-					<LinkItem />
-					<LinkItem />
-					<LinkItem />
-					<LinkItem />
-					<LinkItem />
-					<LinkItem />
-				</ResizablePanel>
-			</ResizablePanelGroup>
+		<main>
+			<div className="container flex-1 items-start ">
+				<ResizablePanelGroup direction="horizontal">
+					{/* Sidebar */}
+					<ResizablePanel defaultSize={12} className="">
+						<Sidebar />
+					</ResizablePanel>
+					<ResizableHandle className=" " />
+					{/* Main Content */}
+					<ResizablePanel
+						defaultSize={90}
+						className="p-4 grid grid-cols-4 gap-4"
+					>
+						<LinkItem />
+						<LinkItem />
+						<LinkItem />
+						<LinkItem />
+						<LinkItem />
+						<LinkItem />
+						<LinkItem />
+						<LinkItem />
+						<LinkItem />
+						<LinkItem />
+						<LinkItem />
+						<LinkItem />
+						<LinkItem />
+						<LinkItem />
+						<LinkItem />
+						<LinkItem />
+						<LinkItem />
+						<LinkItem />
+						<LinkItem />
+						<LinkItem />
+						<LinkItem />
+						<LinkItem />
+						<LinkItem />
+						<LinkItem />
+						<LinkItem />
+						<LinkItem />
+						<LinkItem />
+						<LinkItem />
+						<LinkItem />
+						<LinkItem />
+						<LinkItem />
+						<LinkItem />
+						<LinkItem />
+						<LinkItem />
+						<LinkItem />
+						<LinkItem />
+						<LinkItem />
+					</ResizablePanel>
+				</ResizablePanelGroup>
+			</div>
 		</main>
 	);
 }
